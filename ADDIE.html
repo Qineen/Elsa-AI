@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADDIE模型教学设计工具</title>
+    <style>
+        :root {
+            --analysis: #9C9B7D;
+            --design: #D3B5A0;
+            --development: #B7A6B6;
+            --implementation: #A2B2C8;
+            --evaluation: #C4B8A9;
+        }
+
+        body {
+            font-family: '微软雅黑', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            overflow-x: auto;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            min-width: 1200px;
+            padding: 20px 0;
+            align-items: stretch; /* 确保等高 */
+        }
+
+        .phase {
+            flex: 1;
+            min-width: 240px;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column; /* 内部弹性布局 */
+        }
+
+        .phase:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: white;
+            margin: 0 0 15px 0;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            flex-shrink: 0; /* 防止标题压缩 */
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            flex-grow: 1; /* 内容区域自动填充高度 */
+            display: flex;
+            flex-direction: column;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 1.2em;
+            margin: 10px 0;
+            flex-grow: 1; /* 列表区域自动填充 */
+        }
+
+        ul li {
+            position: relative;
+            margin: 8px 0;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #666;
+            position: absolute;
+            left: -1em;
+        }
+
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+
+        .btn {
+            display: block;
+            padding: 10px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 15px;
+            transition: opacity 0.3s;
+            flex-shrink: 0; /* 固定按钮高度 */
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* 各阶段颜色 */
+        .analysis { background-color: var(--analysis); }
+        .design { background-color: var(--design); }
+        .development { background-color: var(--development); }
+        .implementation { background-color: var(--implementation); }
+        .evaluation { background-color: var(--evaluation); }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 分析阶段 -->
+        <div class="phase analysis">
+            <h2>🔍 1.Analysis 分析阶段</h2>
+            <div class="content">
+                <h3>📋 任务拆解</h3>
+                <ul>
+                    <li>确定学习者的需求</li>
+                    <li>评估现有知识和技能</li>
+                    <li>识别学习目标和预期成果</li>
+                </ul>
+                <h3>🤖 AI可以做什么</h3>
+                <ul>
+                    <li>问卷调研</li>
+                    <li>数据分析</li>
+                    <li>学前评估</li>
+                </ul>
+                <a href="https://chat.qwen.ai/s/d1979141-0513-48fd-9be6-3b8c0616c521" class="btn analysis" target="_blank">🛠️ 工具及示例</a>
+            </div>
+        </div>
+
+        <!-- 设计阶段 -->
+        <div class="phase design">
+            <h2>✏️ 2.Design 设计阶段</h2>
+            <div class="content">
+                <h3>📋 任务拆解</h3>
+                <ul>
+                    <li>制定教学计划、策略和方法</li>
+                    <li>制定课程大纲</li>
+                    <li>设定学习目标、评估方法</li>
+                </ul>
+                <h3>🤖 AI可以做什么</h3>
+                <ul>
+                    <li>头脑风暴</li>
+                    <li>资料收集</li>
+                </ul>
+                <a href="https://www.processon.com/v/67da5e1db061df27c53f432d" class="btn design" target="_blank">🛠️ 工具及示例</a>
+            </div>
+        </div>
+
+        <!-- 开发阶段 -->
+        <div class="phase development">
+            <h2>⚙️ 3.Development 开发阶段</h2>
+            <div class="content">
+                <h3>📋 任务拆解</h3>
+                <ul>
+                    <li>将计划转化为学习材料、资源</li>
+                    <li>开发内容和课件</li>
+                    <li>编写练习题目</li>
+                </ul>
+                <h3>🤖 AI可以做什么</h3>
+                <ul>
+                    <li>案例生成</li>
+                    <li>视频制作</li>
+                    <li>PPT课件</li>
+                </ul>
+                <a href="https://www.coze.cn/store/agent/7482345110932324391?bot_id=true" class="btn development" target="_blank">🛠️ 工具及示例</a>
+            </div>
+        </div>
+
+        <!-- 实施阶段 -->
+        <div class="phase implementation">
+            <h2>🤝 4.Implementation 实施阶段</h2>
+            <div class="content">
+                <h3>📋 任务拆解</h3>
+                <ul>
+                    <li>部署学习材料</li>
+                    <li>组织培训活动</li>
+                    <li>交付和实时反馈</li>
+                </ul>
+                <h3>🤖 AI可以做什么</h3>
+                <ul>
+                    <li>互动设计</li>
+                    <li>交互体验</li>
+                </ul>
+                <a href="https://chat.deepseek.com/" class="btn implementation" target="_blank">🛠️ 工具及示例</a>
+            </div>
+        </div>
+
+        <!-- 评估阶段 -->
+        <div class="phase evaluation">
+            <h2>📊 5.Evaluation 评估阶段</h2>
+            <div class="content">
+                <h3>📋 任务拆解</h3>
+                <ul>
+                    <li>收集学习反馈</li>
+                    <li>评估学习效果</li>
+                    <li>修订课程内容</li>
+                </ul>
+                <h3>🤖 AI可以做什么</h3>
+                <ul>
+                    <li>数据分析</li>
+                    <li>生成报告</li>
+                    <li>改进建议</li>
+                </ul>
+                <a href="https://yuanbao.tencent.com/chat/naQivTmsDa/b02447f4-84ed-496f-a67b-e6bfbb66597d" class="btn evaluation" target="_blank">🛠️ 工具及示例</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
