@@ -1,0 +1,15 @@
+import random
+
+number = random.randint(1, 100)
+attempts = 0
+
+while True:
+    guess = int(input("猜一个1-100的数字："))
+    attempts += 1
+    if guess < number:
+        print("再大一点！")
+    elif guess > number:
+        print("再小一点！")
+    else:
+        print(f"恭喜！你用了{attempts}次猜中！")
+        break
